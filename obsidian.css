@@ -200,20 +200,67 @@
 	  padding-right: 1% !important;
 	}
 	
-
-	strong,
-	.cm-strong {
-	  font-weight: 600;
-	  color: #3e8fb0;
+	.cm-em,
+	em {
+	  color: #c4a7e7 !important;
+	  font-family: 'Cartograph CF' !important;
 	}
 	
-
-	em,
-	.cm-em {
-	  color: var(--text-muted);
-	  font-style: italic;
+	.cm-em.cm-formatting-em {
+	  display: inline-flex;
+	  width: 0.45rem;
+	  font-size: 0.6rem;
+	  vertical-align: text-top;
 	}
 	
+	.cm-strong:not(.cm-formatting-strong),
+	strong {
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	  padding: 0 0.1rem;
+	  color: ##eb6f92;
+	  background-color: #eb6f92;
+	  background-image: linear-gradient(62deg, #eb6f92 0%, #c4a7e7 100%) !important;
+	}
+	
+	strong .math.math-inline .MathJax {
+	  position: inherit !important;
+	}
+	
+	.cm-strong::selection,
+	strong::selection {
+	  -webkit-text-fill-color: #eb6f92;
+	}
+
+	.cm-formatting.cm-formatting-strong.cm-strong,
+	.cm-formatting.cm-formatting-em.cm-em {
+	  color: var(--text-faint) !important;
+	  opacity: 0.25;
+	}
+	
+	.cm-strong:not(.cm-formatting-strong),
+	strong {
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	  padding: 0 0.1rem;
+	  color: #eb6f92;
+	  background-color: #eb6f92;
+	  background-image: linear-gradient(62deg, #eb6f92 0%, #c4a7e7 100%) !important;
+	}
+	
+	strong .math.math-inline .MathJax {
+	  position: inherit !important;
+	}
+	
+	.cm-strong::selection,
+	strong::selection {
+	  -webkit-text-fill-color: var(--text-faint);
+	}
+	
+	.cm-strong kbd,
+	strong kbd {
+	  -webkit-text-fill-color: initial;
+	}
 
 	s,
 	.cm-strikethrough {
@@ -759,25 +806,6 @@
 	
 	}
 	
-	.cm-strong,
-	strong {
-	  -webkit-background-clip: text;
-	  -webkit-text-fill-color: transparent;
-	  padding: 0 0.1rem;
-	  color: var(--pink);
-	  background-color: var(--pink);
-	  background-image: linear-gradient(62deg, var(--text-accent) 0%, var(--text-faint) 100%) !important;
-	}
-	
-	strong .math.math-inline .MathJax {
-	  position: inherit !important;
-	}
-	
-	.cm-strong::selection,
-	strong::selection {
-	  -webkit-text-fill-color: var(--text-faint);
-	}
-	
 	.cm-s-obsidian span.cm-link,
 	.cm-s-obsidian span.cm-hmd-internal-link {
 	  text-shadow: -1px -1px 2px var(--background-secondary), -1px 1px 2px var(--background-secondary),
@@ -796,11 +824,11 @@
 	}
 	
 	.cm-s-obsidian span.cm-hmd-internal-link {
-	  background-image: linear-gradient(to bottom, var(--purple) 0%, var(--pink) 100%);
+	  background-image: linear-gradient(to bottom, #c4a7e7 0%, #ea9a97 100%);
 	}
 	
 	.cm-s-obsidian span.cm-formatting-link {
-	  color: var(--text-faint) !important;
+	  color: #eb6f92 !important;
 	  opacity: 0.25;
 	}
 	
@@ -906,11 +934,11 @@ input[type=checkbox], .markdown-preview-view .cm-formatting-task {
 	border-radius: 50%;
 	border: 1px solid var(--text-faint);
 	padding: 0;
-    vertical-align: middle;    
+	vertical-align: middle;    
 }
 
 .markdown-preview-view .cm-s-obsidian span.cm-formatting-task {
-	color: transparent;
+	
 	width: 1em !important;
 	height: 1em;
 	display: inline-block;
