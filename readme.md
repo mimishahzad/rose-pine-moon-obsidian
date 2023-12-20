@@ -17,7 +17,7 @@
 2. Disable Safe Mode
 3. Navigate to the "Appearance" section
 4. Go to Themes
-5. Select Rose Pine Moon from the options. 
+5. Select Rosé Pine Moon from the options. 
 
 ## Gallery
 ![Social Image Header](assets/Obsidian.png)
